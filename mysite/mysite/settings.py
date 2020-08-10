@@ -43,14 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'rest_framework',
-    'knox',
-    'rest_framework.authtoken',
+    
     
     
 ]
  
- AUTH_USER_MODEL='account.Account'
+ 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,9 +82,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-         #'rest_framework.authentication.BasicAuthentication',
-         #'rest_framework.authentication.SessionAuthentication',
-        'knox.auth.TokenAuthentication',
+         'rest_framework.authentication.BasicAuthentication',
+         'rest_framework.authentication.SessionAuthentication',
+        
     ]
 }
 
